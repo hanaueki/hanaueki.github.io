@@ -241,6 +241,7 @@ const ctx = canvas.getContext("2d");
 
 const pickedColorChip = document.querySelector("#pickedColorChip");
 const pickedHex = document.querySelector("#pickedHex");
+const pickedRgb = document.querySelector("#pickedRgb");
 
 //画像を読み込む
 imageInput.addEventListener("change",function(event){
@@ -273,6 +274,7 @@ canvas.addEventListener("click",function(event){
     const r = pixel[0];
     const g = pixel[1];
     const b = pixel[2];
+    pickedRgb.textContent = `RGB:${r},${g},${b}`;
 
     const hex = "#" + r.toString(16).padStart(2,"0") +
                 g.toString(16).padStart(2,"0") + b.toString(16).padStart(2,"0");
