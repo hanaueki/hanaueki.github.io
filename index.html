@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>和色検索</title>
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <h2>画像色検索</h2>
+        <br>
+        <input type="file" id="imageInput" accept="image/*">
+        <br><br>
+        <canvas id="imageCanvas"></canvas>
+        <br><br>
+        <div id="pickedColor">選択した色：
+            <span id="pickedColorChip"></span>
+            <span id="pickedHex">---</span>
+        </div>
+        <br>
+        <h2>入力した色に最も近い和色</h2>
+        <div class="input-area">
+            <input type="text" id="hexInput" value="#FFFFFF" placeholder="#FFFFFF">
+            <button id="searchButton">_</button>
+            <div id="colorPreview"></div>
+        </div>
+        <div id="results"></div>
+    </body>
+</html>
