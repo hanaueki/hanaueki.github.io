@@ -208,6 +208,7 @@ function displayResults(results){
     const container = document.querySelector("#results");
     container.innerHTML = "";
     results.forEach((color,index)=>{
+        const rgb = hexToRgb(color.hex);
         const div=document.createElement("div");
         div.className="result";
         div.innerHTML=`
@@ -215,6 +216,7 @@ function displayResults(results){
             <div class="color-info"><h2>${index +1}位　${color.name}</h2>
                 <div>読み方：${color.reading}</div>
                 <div>HEX：${color.hex}</div>
+                <div>RGB：（${rgb.r}、${rgb.g}、${rgb.b}）</div>
                 <div class="delta-e">ΔE：${color.deltaE.toFixed(3)}</div>
             </div>
             `;
@@ -274,7 +276,7 @@ canvas.addEventListener("click",function(event){
     const r = pixel[0];
     const g = pixel[1];
     const b = pixel[2];
-    pickedRgb.textContent = `RGB:${r},${g},${b}`;
+    pickedRgb.textContent = `RGB：（${r}、${g}、${b}）`;
 
     const hex = "#" + r.toString(16).padStart(2,"0") +
                 g.toString(16).padStart(2,"0") + b.toString(16).padStart(2,"0");
