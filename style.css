@@ -1,79 +1,218 @@
-body{
-    font-family: sans-serif;
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
+/*全体*/
+
+*{
+    box-sizing: border-box;
 }
+body{
+    font-family: "Noto Sans JP","Yu Gothic",sans-serif;
+    background-color: #F5F3EF;
+    color: #333A34;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    line-height: 1.7;
+}
+
+/*見出し*/
 
 h1{
-    margin-bottom: 30px;
+    font-size: 32px;
+    color: #405644;
+    margin-bottom: 10px;
 }
 
-.input-area{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    margin-bottom: 30px;
+h2{
+    font-size: 22px;
+    color: #405644;
+    margin: 30px 0 16px;
 }
 
-#hexInput{
-    width: 150px;
-    padding: 10px;
-    font-size: 18px;
-}
+/*画像アップロード*/
 
-#searchButton{
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#colorPreview{
-    width: 60px;
-    height: 60px;
-    border: 1px solid #999;
-}
-
-.result{
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.color-chip{
-    width: 70px;
-    height: 70px;
-    border: 1px solid #999;
-    flex-shrink: 0;
-}
-
-.color-info h2{
-    margin: 0 0 10px;
-}
-
-.delta-e{
-    font-weight: bold;
+#imageInput{
+    display: block;
+    max-width: 100%;
+    margin-bottom: 16px;
 }
 
 #imageCanvas{
+    display: block;
     max-width: 100%;
+    height: auto;
+    border: 1px solid #DEDCD4;
+    border-radius: 8px;
     cursor: crosshair;
-    border: 1px solid #ccc;
+    background: #FFFFFF;
 }
+
+/*選択した色*/
 
 #pickedColor{
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: #FFFFFF;
+    border: 1px solid #E5E2DA;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px 0 20px;
 }
 
 #pickedColorChip{
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #999;
+    width: 55px;
+    height: 56px;
+    border: 1px solid #DDDBD4;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+/*HEX入力*/
+
+.input-area{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: #FFFFFF;
+    border: 1px solid #E5E2DA;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+#hexInput{
+    width: 150px;
+    max-width: 100%;
+    padding: 10px 12px;
+    font-size: 18px;
+    border: 1px solid #D8D8CF;
+    border-radius: 6px;
+    background: #FFFFFF;
+}
+
+#hexInput:focus{
+    outline: 2px solid #829783;
+    outline-offset: 2px;
+}
+
+/*検索ボタン*/
+
+#searchButton{
+    padding: 11px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: #66796A;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.25;
+}
+
+#searchButton:hover{
+    background: #4D6352;
+}
+
+/*入力色プレビュー*/
+
+#colorPreview{
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    border: 1px solid #DDDBD4;
+    border-radius: 8px;
+}
+
+/*検索結果カード*/
+
+.result{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #FFFFFF;
+    border: 1px solid #E5E2DA;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(50,50,40,0.04);
+    transition: transform 0.2s,box-shadow 0.2s;
+}
+
+.result:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(50,50,40,0.08);
+}
+
+/*検索結果の色チップ*/
+
+.color-chip{
+    width: 76px;
+    height: 76px;
+    flex-shrink: 0;
+    border: 1px solid #DDDBD4;
+    border-radius: 8px;
+}
+
+/*検索結果の文字*/
+
+.color-info{
+    min-width: 0;
+}
+
+.color-info h2{
+    font-size: 22px;
+    margin: 0 0 6px;
+    color: #405644;
+}
+
+.delta-e{
+    font-weight: bold;
+    color: #66796A;
+}
+
+h4{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.9;
+    color: #777A73;
+    background: #ECE9E1;
+    padding: 16px;
+    margin-top: 28px;
+    border-radius: 8px;
+}
+
+/*スマートフォン対応*/
+
+@media (max-width:600px){
+    body{
+        padding: 24px 16px;
+    }
+
+    h1{
+        font-size: 26px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    .result{
+        gap: 44px;
+        padding: 14px;
+    }
+
+    .color-chip{
+        width: 60px;
+        height: 60px;
+    }
+
+    .color-info h2{
+        font-size: 19px;
+    }
+
+    .input-area{
+        gap: 10px;
+    }
 }
