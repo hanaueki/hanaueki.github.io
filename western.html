@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>洋色検索 | 画像から近い洋色を探す</title>
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="script_w.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="app-header">
+                <h1>洋色検索</h1>
+                <p></p>
+            </header>
+            <main>
+                <section class="section upload-section">
+                    <h2>画像から色を選ぶ</h2>
+                    <input type="file" id="imageInput" accept="image/*">
+                    <div class="canvas-area">
+                        <canvas id="imageCanvas"></canvas>
+                    </div>
+                </section>
+
+                <section class="section picked-section">
+                    <h2>選択した色</h2>
+                    <div id="pickedColor">
+                        <span id="pickedColorChip"></span>
+                        <div class="picked-info">
+                            <span id="pickedHex">---</span>
+                            <span id="pickedRgb">RGB：---</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="section search-section">
+                    <h2>入力した色に最も近い色</h2>
+                    <div class="input-area">
+                        <input type="text" id="hexInput" value="#FFFFFF" placeholder="#FFFFFF" aria-label="HEXカラーコード">
+                        <button id="searchButton">この色で検索</button>
+                        <div id="colorPreview"></div>
+                    </div>
+                    <div id="results"></div>
+                </section>
+            </main>
+            <footer class="app-footer">
+                <p>
+                    ΔE（デルタE）は、2つの色の色の違いを数値で表したものです。
+                    数値が0に近いほど色が似ています。
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>
