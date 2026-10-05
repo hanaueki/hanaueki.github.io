@@ -15,8 +15,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>和色検索 | 画像から近い和色を探す</title>
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-        <link rel="stylesheet" href="style.css">
-        <script src="script_j.js" defer></script>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script_j.js" defer></script>
+        <script src="js/palette.js" defer></script>
     </head>
     <body>
         <div class="container">
@@ -51,6 +52,12 @@
                         <div id="colorPreview"></div>
                     </div>
                     <div id="results"></div>
+                </section>
+                <section id="palette-section">
+                    <h2>色の相性配色</h2>
+                    <p>スポイトで選んだ色から、相性のよい配色を生成します。</p>
+                    <button id="generate-palette-btn">相性のよい配色を生成</button>
+                    <div id="palette-results"></div>
                 </section>
             </main>
             <footer class="app-footer">
