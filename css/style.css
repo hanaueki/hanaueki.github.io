@@ -115,6 +115,18 @@ h2{
     background: #4D6352;
 }
 
+#generate-palette-btn{
+    padding: 11px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: #66796A;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.25;
+}
+
 /*入力色プレビュー*/
 
 #colorPreview{
@@ -181,6 +193,12 @@ h4{
     padding: 16px;
     margin-top: 28px;
     border-radius: 8px;
+}
+
+/*ΔE*/
+.delta-e-description{
+    margin: 20px 0;
+    font-size: 14px;
 }
 
 /*配色生成*/
