@@ -161,7 +161,7 @@ function deltaE2000(L1,a1,b1,L2,a2,b2){
 
 //JSONを読み込む
 let colors = [];
-fetch("western-colors.json").then(response => response.json())
+fetch("data/western-colors.json").then(response => response.json())
     .then(data => {colors = data;
     console.log(`${colors.length}色を読み込みました`);
     searchColors();
