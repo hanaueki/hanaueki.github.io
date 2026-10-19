@@ -64,3 +64,12 @@ button:hover{
 #restartButton{
     display: none;
 }
+.back-link{
+    display: inline-block;
+    margin: 30px;
+    color: #555555;
+    text-decoration: none;
+}
+.back-link:hover{
+    text-decoration: underline;
+}
