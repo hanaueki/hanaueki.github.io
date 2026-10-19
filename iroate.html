@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>色当てゲーム</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="game">
+    <h1>色当てゲーム</h1>
+    <div id="mode-select">
+        <label><input type="radio" name="mode" value="name" checked>和名モード</label>
+        <label><input type="radio" name="mode" value="rgb">RGBモード</label>
+    </div>
+    <div id="situmon">この色の和名はどれ？</div>
+    <div id="iro"></div>
+    <div id="sentakusi"></div>
+    <div class="buttons">
+        <div class="main-buttons">
+        <button id="button">回答する</button>
+        <button id="nextButton">次の問題</button>
+        </div>
+    <button id="restartButton">もう一度遊ぶ</button>
+    </div>
+    <div id="result"></div>
+    <div id="score">正解数：0</div>
+    <div id="question-count">第1問／全10問</div>
+    </div>
+</body>
+</html>
