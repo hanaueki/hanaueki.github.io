@@ -192,7 +192,7 @@ p{
 }
 .back-link{
     display: inline-block;
-    margin: 30px;
+    margin: 30px 0;
     color: #555555;
     text-decoration: none;
 }
