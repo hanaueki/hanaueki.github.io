@@ -190,3 +190,12 @@ p{
 .delete-btn:hover{
     background-color: #FCECEF;
 }
+.back-link{
+    display: inline-block;
+    margin: 30px;
+    color: #555555;
+    text-decoration: none;
+}
+.back-link:hover{
+    text-decoration: underline;
+}
