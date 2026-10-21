@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>いろだより</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"defer></script>
+    <script src="js/script.js" defer></script>
+    
+</head>
+<body>
+    <h1>いろだより</h1>
+    <p>今日の気持ちを表してみましょう</p>
+    <section class="palette-section">
+        <div id="save-area">
+        <div class="palette-date">
+            <time id="date-display"></time>
+        </div>
+        <div class="palette-card">
+            <div class="palette-color" id="color1"></div>
+            <div class="palette-color" id="color2"></div>
+            <div class="palette-color" id="color3"></div>
+        </div>
+        <div class="hex-values">
+            <span id="hex1"></span>
+            <span id="hex2"></span>
+            <span id="hex3"></span>
+        </div>
+        <p id="message-display"></p>
+        <p class="card-signature">いろだより</p>
+        </div>
+        <p class="color-guide">下の色をクリックすると、好きな色に変更できます</p>
+        <div class="color-selectors">
+            <input type="color" id="picker1" value="#F9E79F">
+            <input type="color" id="picker2" value="#F5B7B1">
+            <input type="color" id="picker3" value="#D7BDE2">
+        </div>
+        <label for="message">ひとこと（任意）</label>
+        <textarea id="message" rows="3" maxlength="100" placeholder="書きたいときだけ、ひとこと．．．"></textarea>
+        <button type="button" id="save-btn">PNG画像として保存</button>
+        <button type="button" id="save-palette-btn">このいろだよりを保存</button>
+
+        <a href="gallery.html">わたしのいろだよりを見る</a>
+    </section>
+</body>
+</html>
