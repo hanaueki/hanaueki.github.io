@@ -233,6 +233,22 @@ h4{
     overflow-wrap: anywhere;
 }
 
+.page-footer{
+    margin-top: 40px;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #DDDDDD;
+}
+
+.back-link{
+    color: #555555;
+    text-decoration: none;
+}
+
+.back-link:hover{
+    text-decoration: underline;
+}
+
 /*スマートフォン対応*/
 
 @media (max-width:600px){
