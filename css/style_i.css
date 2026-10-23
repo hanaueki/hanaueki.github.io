@@ -1,18 +1,139 @@
 body {
-    background-color: #F5F5F5;
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: #F7F2F0;
+    color: #604D57;
 }
 .search {
-    width: 400px;
+    width: 90%;
+    max-width: 650px;
     background-color: white;
     padding: 30px;
     margin: 50px auto;
     text-align: center;
 }
 h1 {
-    margin-bottom: 50px;
+    margin-bottom: 15px;
+    font-family: "Kosugi Maru", sans-serif;
 }
 #kensaku {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+.color-dots{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     gap: 10px;
+    margin-bottom: 25px;
+}
+.color-dots span{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+}
+.color-dots span:nth-child(1){
+    background-color: #E8A8B8;
+}
+.color-dots span:nth-child(2){
+    background-color: #F2D6A2;
+}
+.color-dots span:nth-child(3){
+    background-color: #B9D9C2;
+}
+.color-dots span:nth-child(4){
+    background-color: #A8CDE0;
+}
+.color-dots span:nth-child(5){
+    background-color: #C9B8E5;
+}
+.subtitle{
+    font-size: 14px;
+    color: #8E7883;
+    margin-bottom: 30px;
+}
+
+.menu-card{
+    display: block;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border: 1px solid #EADDE3;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #604D57;
+}
+.card-colors{
+    display: flex;
+    height: 45px;
+    gap: 4px;
+    margin-bottom: 15px;
+}
+.card-colors span{
+    flex: 1;
+    border-radius: 5px;
+}
+
+.japanese-colors span:nth-child(1){
+    background-color: #D18C98;
+}
+.japanese-colors span:nth-child(2){
+    background-color: #E8C58F;
+}
+.japanese-colors span:nth-child(3){
+    background-color: #A9C5A5;
+}
+.western-colors span:nth-child(1){
+    background-color: #A3C8DD;
+}
+.western-colors span:nth-child(2){
+    background-color: #C4B3DF;
+}
+.western-colors span:nth-child(3){
+    background-color: #E7B5C5;
+}
+.irodayori-colors span:nth-child(1){
+    background-color: #E9AFA9;
+}
+.irodayori-colors span:nth-child(2){
+    background-color: #F3D6A4;
+}
+.irodayori-colors span:nth-child(3){
+    background-color: #A7CDBF;
+}
+.game-colors span:nth-child(1){
+    background-color: #C6B5E3;
+}
+.game-colors span:nth-child(2){
+    background-color: #A6C9DD;
+}
+.game-colors span:nth-child(3){
+    background-color: #F0C4A3;
+}
+
+
+.menu-card h2{
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-family: "Kosugi Maru",sans-serif;
+}
+.menu-card p{
+    font-size: 13px;
+    color: #8E7883;
+}
+
+.menu-card{
+    transition: transform 0.25s ease,box-shadow 0.25s ease;
+}
+.menu-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(96,77,87,0.12);
+}
+.menu-card:focus-visible{
+    outline: 2px solid #C9A3BB;
+    outline-offset: 3px;
+}
+
+@media(max-width:500px){
+    #kensaku{
+        grid-template-columns: 1fr;
+    }
 }
