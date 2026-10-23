@@ -14,18 +14,52 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>色彩検索 | 画像から近い色を探す</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&family=Zen+Old+Mincho:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Great+Vibes&family=Kiwi+Maru:wght@300;400&family=Kosugi+Maru&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
         <link rel="stylesheet" href="css/style_i.css">
         <script src="js/script.js" defer></script>
     </head>
 <body>
     <div class="search">
+        <div class="color-dots">
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
     <h1>色彩検索</h1>
+    <p class="subtitle">色を見つける、組み合わせる、楽しむ</p>
     <div id="kensaku">
-    <a href="japanese.html">和の色彩検索</a><br>
-    <a href="western.html">洋の色彩検索</a><br>
-    <a href="./irodayori/irodayori.html">いろだより</a><br>
-    <a href="./iroate/iroate.html">色当てゲーム</a><br>
+    <a href="japanese.html" class="menu-card">
+        <div class="card-colors japanese-colors">
+            <span></span><span></span><span></span>
+        </div>
+        <h2>和の色彩検索</h2>
+        <p>日本の伝統色を探す</p>
+    </a>
+    <a href="western.html" class="menu-card">
+        <div class="card-colors western-colors">
+            <span></span><span></span><span></span>
+        </div>
+        <h2>洋の色彩検索</h2>
+        <p>世界の色に出会う</p>
+    </a>
+    <a href="./irodayori/irodayori.html" class="menu-card">
+        <div class="card-colors irodayori-colors">
+            <span></span><span></span><span></span>
+        </div>
+        <h2>いろだより</h2>
+        <p>色で配色を楽しむ</p>
+    </a>
+    <a href="./iroate/iroate.html" class="menu-card">
+        <div class="card-colors game-colors">
+            <span></span><span></span><span></span>
+        </div>
+        <h2>色当てゲーム</h2>
+        <p>遊びながら色を学ぶ</p>
+    </a>
     </div>
     </div>
 </body>
