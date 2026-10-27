@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>季節の配色ジェネレーター</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/seasonal.css">
+    <script src="js/color-conversion.js" defer></script>
+    <script src="js/seasonal.js" defer></script>
+</head>
+<body>
+    <h1>季節の配色ジェネレーター</h1>
+    <div id="theme-selector">
+        <label for="theme-select">配色テーマを選ぶ</label>
+        <select id="theme-select">
+        <optgroup label="四季">
+            <option value="spring">春</option>
+            <option value="summer">夏</option>
+            <option value="autumn">秋</option>
+            <option value="winter">冬</option>
+        </optgroup>
+        <optgroup label="イベント">
+            <option value="newYear">新年</option>
+            <option value="valentine">バレンタイン</option>
+            <option value="halloween">ハロウィン</option>
+            <option value="christmas">クリスマス</option>
+        </optgroup>
+        </select>
+    </div>
+    <h2 id="season-title">春の配色</h2>
+    <div id="palette">
+        <div id="main-color"></div>
+        <div id="sub-color"></div>
+        <div id="accent-color"></div>
+    </div>
+    <div id="color-info">
+        <div class="color-detail">
+            <div id="main-chip" class="color-chip"></div>
+            <div>
+                <p>メインカラー</p>
+                <div class="hex-row">
+                    <span id="main-hex"></span>
+                    <button type="button" class="copy-btn" data-color="main">コピー</button>
+                    <span id="main-copy-message" class="copy-message" role="status"></span>
+                </div>
+                <p id="main-rgb"></p>
+            </div>
+        </div>
+        <div class="color-detail">
+            <div id="sub-chip" class="color-chip"></div>
+            <div>
+                <p>サブカラー</p>
+                <div class="hex-row">
+                    <span id="sub-hex"></span>
+                    <button type="button" class="copy-btn" data-color="sub">コピー</button>
+                    <span id="sub-copy-message" class="copy-message" role="status"></span>
+                </div>
+                <p id="sub-rgb"></p>
+            </div>
+        </div>
+        <div class="color-detail">
+            <div id="accent-chip" class="color-chip"></div>
+            <div>
+                <p>アクセントカラー</p>
+                <div class="hex-row">
+                    <span id="accent-hex"></span>
+                    <button type="button" class="copy-btn" data-color="accent">コピー</button>
+                    <span id="accent-copy-message" class="copy-message" role="status"></span>
+                </div>
+                <p id="accent-rgb"></p>
+            </div>
+        </div>
+    </div>
+    <button id="generate-btn">別の配色を生成</button>
+</body>
+</html>
